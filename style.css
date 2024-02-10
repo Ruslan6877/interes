@@ -1,0 +1,198 @@
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  canvas {
+    border: 10px solid rgb(109, 241, 160);
+    background: url(https://img.freepik.com/free-photo/boiga-snake-dendrophila-yellow-ringed_488145-196.jpg)
+  }
+  
+  button {
+    margin: 20px;
+    color: aliceblue;
+    background: url(https://cdnn21.img.ria.ru/images/07e7/05/17/1873673719_0:227:3071:1955_1920x0_80_0_0_571beab96f1fa26390b9583291395a41.jpg);
+    border-radius: 5px
+  }
+  
+  .ctx{
+      border-radius: 5px
+  }
+
+
+  @media (max-width: 900px ){
+      body{
+          display: flex;
+          flex-direction: column;
+          
+      }
+  }
+   */
+
+
+  .container {
+    text-align: center;
+  }
+
+  h1{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color:  rgba(11, 99, 246, 1);
+  }
+  
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    box-shadow: 0 5px 15px 0 rgba(11, 99, 246, 1);
+  }
+  
+  #restart-btn {
+ background: rgba(11, 99, 246, 1);
+  box-shadow: 0 5px 15px 0 rgba(11, 99, 246, 1);
+  border: none;
+  transition: 0.5s;
+  font-size: 30px;
+  border-radius: 10px;
+    margin-top: 20px;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#restart-btn :hover {
+  transform: translate(0,-3px);
+  box-shadow: 0 20px 40px 0 rgba(11, 99, 246, 1);
+}
+
+
+
+.cube {
+    margin-left: 100px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCube 5s infinite linear;
+  }
+  
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .front { 
+      transform: translateZ(100px);
+      background: url(https://gagadget.com/media/cache/c9/f0/c9f0d64a056049a98a1690483a8c5974.jpg);
+     }
+     img{
+         width: 200px;
+         height: 200px;
+     }
+  .back {
+       transform: rotateY(180deg) translateZ(100px);
+       background: url(https://www.okino.ua/media/var/news/2019/12/12/Endgame.jpg);
+     }
+  .right {
+       transform: rotateY(90deg) translateZ(100px);
+    background: url(https://i.ytimg.com/vi/CVUNqmlGmfI/maxresdefault.jpg);    }
+  .left { 
+      transform: rotateY(-90deg) translateZ(100px);
+      background: url(https://st.peopletalk.ru/wp-content/uploads/2022/02/bez-imeni-6-1024x569.png); 
+    }
+  .top { 
+      transform: rotateX(90deg) translateZ(100px);
+    background: url(https://the-flow.ru/uploads/images/resize/830x0/adaptiveResize/08/82/03/92/25/588b11a40cd7.jpg);    }
+  .bottom {
+       transform: rotateX(-90deg) translateZ(100px);
+       background: url(https://gagadget.com/media/cache/c9/f0/c9f0d64a056049a98a1690483a8c5974.jpg); 
+    }
+  
+  @keyframes rotateCube {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
+
+  /*солнечная система*/
+  .background {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    max-width: 600px;
+    height: 400px;
+    background-image: url('https://www.komar.de/media/cms/fileadmin/user_upload/Category/Fototapeten/Marvel/komar-fototapeten-marvel.jpg'); /* Путь к первому фоновому изображению */
+    background-size: cover;
+    transition: background-image 0.5s ease; /* Анимация изменения фона */
+  }
+  
+  #changeButton {
+    /* position: absolute;
+    top: 20px;
+    left: 20px; */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* бегуший*/
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#fact-container {
+    margin-top: 20px;
+}
+
+#fact-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#fact-button:hover {
+    background-color: #0056b3;
+}
+
+#emoji {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+@media (max-width: 800px){
+
+}
